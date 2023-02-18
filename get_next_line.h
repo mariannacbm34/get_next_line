@@ -23,7 +23,7 @@
 
 char		*get_next_line(int fd);
 int			ft_countline(char *str);
-size_t		ft_strlen(char *str);
+size_t		ft_strlen(const char *str);
 char		*ft_strjoin(char *str1, char *str2);
 void		clean_buff(char *buff);
 

@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -58,7 +58,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	while (str1 && str1[i])
 		aux[j++] = str1[i++];
 	i = 0;
-	while (str2[j])
+	while (str2[i])
 	{
 		aux[j++] = str2[i];
 		if (str2[i] == '\n')
@@ -66,6 +66,7 @@ char	*ft_strjoin(char *str1, char *str2)
 		i++;
 	}
 	aux[j] = '\0';
+	free(str1);
 	return (aux);
 }
 
