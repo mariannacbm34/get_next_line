@@ -1,6 +1,8 @@
 {
-    "vscode-pets.position": "panel",
+    "vscode-pets.position": "explorer",
     "vscode-pets.petType": "crab",
     "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.theme": "beach"
+    "vscode-pets.theme": "beach",
+    "vscode-pets.petColor": "red",
+    "vscode-pets.petSize": "small"
 }
