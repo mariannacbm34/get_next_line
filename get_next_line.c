@@ -17,18 +17,15 @@ char	*get_next_line(int fd)
 	static char	buff[BUFFER_SIZE + 1];
 	char		*line;
 
-	line = NULL;
+	line = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	while (!ft_countline(buff))
+	while (buff[0] || read(fd, buff, BUFFER_SIZE) > 0)
 	{
-		if (!*buff)
-		{
-			if (read(fd, buff, BUFFER_SIZE) <= 0)
-				break ;
-		}
 		line = ft_strjoin(line, buff);
 		clean_buff(buff);
+		if (buff[0] == 0)
+			break ;
 	}
 	return (line);
 }

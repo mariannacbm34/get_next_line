@@ -19,7 +19,7 @@ int	main(void)
 	printf("abriu\n");
 	while (i < 50)
 	{
-		printf("Is get_next_line working?:%s", tmp = get_next_line(fd));
+		printf("Is get_next_line working?:%s\n", tmp = get_next_line(fd));
 		if (tmp)
 			free(tmp);
 		tmp = NULL;
