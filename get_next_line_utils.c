@@ -28,7 +28,7 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-void	clean_buff(char *str)
+int	clean_buff(char *str)
 {
 	int	i;
 	int	j;
@@ -46,12 +46,14 @@ void	clean_buff(char *str)
 		str[i] = 0;
 		i++;
 	}
+	return (nl);
 }
 
 char	*ft_strjoin(char *str1, char *str2)
 {
 	char	*aux;
 	int		i;
+	int		j;
 
 	i = 0;
 	aux = malloc(ft_strlen(str1) + ft_strlen(str2) + 1);
@@ -62,12 +64,13 @@ char	*ft_strjoin(char *str1, char *str2)
 		aux[i] = str1[i];
 		i++;
 	}
-	while (*str2)
+	j = 0;
+	while (str2[j])
 	{
-		aux[i++] = *str2;
-		if (*str2 == '\n')
+		if (str2[j] == '\n')
 			break ;
-		str2++;
+		aux[i++] = str2[j];
+		j++;
 	}
 	aux[i] = 0;
 	return (aux);

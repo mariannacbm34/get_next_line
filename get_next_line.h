@@ -24,6 +24,6 @@
 char		*get_next_line(int fd);
 size_t		ft_strlen(char *str);
 char		*ft_strjoin(char *str1, char *str2);
-void		clean_buff(char *buff);
+int		clean_buff(char *buff);
 
 #endif

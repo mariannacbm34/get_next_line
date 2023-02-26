@@ -18,13 +18,12 @@ char	*get_next_line(int fd)
 	char		*line;
 
 	line = 0;
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	while (buff[0] || read(fd, buff, BUFFER_SIZE) > 0)
 	{
 		line = ft_strjoin(line, buff);
-		clean_buff(buff);
-		if (buff[0] == 0)
+		if (clean_buff(buff))
 			break ;
 	}
 	return (line);
