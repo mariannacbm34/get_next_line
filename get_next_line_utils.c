@@ -6,7 +6,7 @@
 /*   By: marmonte <marmonte@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:27:32 by marmonte          #+#    #+#             */
-/*   Updated: 2023/02/10 16:45:16 by marmonte         ###   ########.fr       */
+/*   Updated: 2023/02/27 16:40:43 by marmonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	clean_buff(char *str)
 {
 	int	i;
 	int	j;
-	int nl;
+	int	nl;
 
 	i = 0;
 	j = 0;

@@ -5,5 +5,5 @@
     "vscode-pets.theme": "beach",
     "vscode-pets.petColor": "red",
     "vscode-pets.petSize": "small",
-    "codam-norminette-3.command": "norminette.exe"
+    "codam-norminette-3.command": "norminette"
 }

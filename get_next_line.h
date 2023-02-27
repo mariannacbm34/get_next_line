@@ -6,7 +6,7 @@
 /*   By: marmonte <marmonte@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:27:43 by marmonte          #+#    #+#             */
-/*   Updated: 2023/02/10 16:45:24 by marmonte         ###   ########.fr       */
+/*   Updated: 2023/02/27 16:33:34 by marmonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-char		*get_next_line(int fd);
-size_t		ft_strlen(char *str);
-char		*ft_strjoin(char *str1, char *str2);
-int		    clean_buff(char *buff);
+char	*get_next_line(int fd);
+size_t	ft_strlen(char *str);
+char	*ft_strjoin(char *str1, char *str2);
+int		clean_buff(char *buff);
 
 #endif
