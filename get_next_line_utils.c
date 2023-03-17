@@ -28,26 +28,6 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-int	clean_buff(char *str)
-{
-	int	i;
-	int	j;
-	int	nl;
-
-	i = 0;
-	j = 0;
-	nl = 0;
-	while (str[i])
-	{
-		if (nl)
-			str[j++] = str[i];
-		if (str[i] == '\n')
-			nl = 1;
-		str[i] = 0;
-		i++;
-	}
-	return (nl);
-}
 
 char	*ft_strjoin(char *str1, char *str2)
 {
@@ -73,5 +53,27 @@ char	*ft_strjoin(char *str1, char *str2)
 		j++;
 	}
 	aux[i] = 0;
+	free(str1);
 	return (aux);
+}
+
+int	clean_buff(char *str)
+{
+	int	i;
+	int	j;
+	int	nl;
+
+	i = 0;
+	j = 0;
+	nl = 0;
+	while (str[i])
+	{
+		if (nl)
+			str[j++] = str[i];
+		if (str[i] == '\n')
+			nl = 1;
+		str[i] = 0;
+		i++;
+	}
+	return (nl);
 }

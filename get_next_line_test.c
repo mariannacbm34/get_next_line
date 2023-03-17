@@ -1,4 +1,4 @@
-/*#include "get_next_line.h"
+#include "get_next_line.h"
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -17,7 +17,7 @@ int	main(void)
 		return (fd);
 	}
 	printf("abriu\n");
-	while (i < 50)
+	while (i < 128)
 	{
 		printf("Is get_next_line working?:%s\n", tmp = get_next_line(fd));
 		if (tmp)
@@ -27,4 +27,3 @@ int	main(void)
 	}
 	close(fd);
 }
-*/
