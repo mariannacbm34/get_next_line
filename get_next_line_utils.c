@@ -49,9 +49,9 @@ char	*ft_strjoin(char *str1, char *str2)
 	j = 0;
 	while (str2[j])
 	{
+		aux[i++] = str2[j];
 		if (str2[j] == '\n')
 			break ;
-		aux[i++] = str2[j];
 		j++;
 	}
 	aux[i] = 0;
