@@ -17,8 +17,8 @@ char	*get_next_line(int fd)
 	static char	buff[BUFFER_SIZE + 1];
 	char		*line;
 
-	line = 0;
-	if (fd < 0 || BUFFER_SIZE < 1)
+	line = NULL;
+	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, NULL, 0) < 0)
 		return (NULL);
 	while (buff[0] || read(fd, buff, BUFFER_SIZE) > 0)
 	{

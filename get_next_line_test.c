@@ -17,7 +17,7 @@ int	main(void)
 		return (fd);
 	}
 	printf("abriu\n");
-	while (i < 128)
+	while (i < 10)
 	{
 		printf("Is get_next_line working?:%s\n", tmp = get_next_line(fd));
 		if (tmp)

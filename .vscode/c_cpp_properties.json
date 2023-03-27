@@ -3,7 +3,8 @@
         {
             "name": "win64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\mingw64\\include"
             ],
             "defines": [
                 "_DEBUG",
@@ -15,7 +16,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**", 
+                "C:\\mingw64\\include"
             ],
             "defines": [
                 "_DEBUG",

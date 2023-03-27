@@ -19,15 +19,17 @@ size_t	ft_strlen(char *str)
 	i = 0;
 	if (!str)
 		return (0);
-	while (str[i] && str[i] != '\n')
+	while (str[i])
 	{
 		i++;
 		if (str[i] == '\n')
-		i++;
+		{
+			i++;
+			break ;
+		}
 	}
 	return (i);
 }
-
 
 char	*ft_strjoin(char *str1, char *str2)
 {
