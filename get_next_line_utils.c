@@ -70,11 +70,14 @@ int	clean_buff(char *str)
 	nl = 0;
 	while (str[i])
 	{
-		if (nl)
-			str[j++] = str[i];
 		if (str[i] == '\n')
 			nl = 1;
 		str[i] = 0;
+		if (nl)
+		{
+			str[j] = str[i];
+			j++;
+		}
 		i++;
 	}
 	return (nl);

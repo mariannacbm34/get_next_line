@@ -17,7 +17,7 @@ char	*get_next_line(int fd)
 	static char	buff[FOPEN_MAX][BUFFER_SIZE + 1];
 	char		*line;
 
-	line = NULL;
+	line = 0;
 	if (read(fd, NULL, 0) < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	while (buff[fd][0] || read(fd, buff[fd], BUFFER_SIZE) >= 1)

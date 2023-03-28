@@ -71,7 +71,10 @@ int	clean_buff(char *str)
 	while (str[i])
 	{
 		if (nl)
-			str[j++] = str[i];
+		{
+			str[j] = str[i];
+			j++;
+		}
 		if (str[i] == '\n')
 			nl = 1;
 		str[i] = 0;
