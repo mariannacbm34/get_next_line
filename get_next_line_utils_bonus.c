@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmonte <marmonte@student.42lisboa.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 14:27:54 by marmonte          #+#    #+#             */
-/*   Updated: 2023/02/27 16:42:22 by marmonte         ###   ########.fr       */
+/*   Created: 2023/01/03 16:27:32 by marmonte          #+#    #+#             */
+/*   Updated: 2023/02/27 16:40:43 by marmonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(char *str)
 {
@@ -21,12 +21,12 @@ size_t	ft_strlen(char *str)
 		return (0);
 	while (str[i])
 	{
-		i++;
 		if (str[i] == '\n')
 		{
 			i++;
 			break ;
 		}
+		i++;
 	}
 	return (i);
 }
@@ -71,10 +71,7 @@ int	clean_buff(char *str)
 	while (str[i])
 	{
 		if (nl)
-		{
-			str[j] = str[i];
-			j++;
-		}
+			str[j++] = str[i];
 		if (str[i] == '\n')
 			nl = 1;
 		str[i] = 0;
