@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
@@ -28,28 +28,3 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
-/*#include "get_next_line.h"
-#include<stdio.h>
-#include<sys/types.h>
-#include<sys/stat.h>
-#include <fcntl.h>
-
-int	main(void)
-{
-	int		fd = 0;
-	char	*tmp = NULL;
-	int		i = 0;
-
-	fd = open("./fd_test.txt", O_RDONLY);
-	while (i < 10)
-	{
-		printf("Is get_next_line working?:%s", tmp = get_next_line(fd));
-		if (tmp)
-			free(tmp);
-		tmp = NULL;
-		i++;
-	}
-	close(fd);
-}
-*/

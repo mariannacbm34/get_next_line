@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*get_next_line(int fd)
 {
@@ -29,7 +29,8 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*#include "get_next_line.h"
+/*
+#include "get_next_line.h"
 #include<stdio.h>
 #include<sys/types.h>
 #include<sys/stat.h>
